@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Websites & Software Developers</title>
+<meta name="description" content="We build websites, business software and data dashboards with Django, Laravel, PHP and Python.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f2f5fa;--surface:#fff;--ink:#14213d;--muted:#55627c;--line:#d9e0ec;--accent:#0e7c7b;--accent-ink:#fff;--mark:#f2b134;--r:14px}
+@media (prefers-color-scheme:dark){:root{--bg:#0d1526;--surface:#152038;--ink:#eaf0fb;--muted:#9aa8c4;--line:#26344f;--accent:#3fc1bd;--accent-ink:#06222a}}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font:17px/1.6 "Source Sans 3",system-ui,sans-serif;background:var(--bg);color:var(--ink)}
+h1,h2,h3{font-family:"Bricolage Grotesque",system-ui,sans-serif;line-height:1.1}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--mark);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.brand{font:700 1.15rem "Bricolage Grotesque",sans-serif;text-decoration:none}
+nav{display:flex;gap:20px}
+nav a{text-decoration:none;color:var(--muted);font-weight:600}
+nav a:hover{color:var(--ink)}
+section{padding:72px 0}
+.hero{padding:80px 0 56px}
+.hero h1{font-size:clamp(2.4rem,7vw,4.6rem);font-weight:800;max-width:14ch;letter-spacing:-.02em}
+.hero h1 mark{background:linear-gradient(transparent 62%,var(--mark) 62%);color:inherit}
+.hero p{max-width:52ch;margin:22px 0 30px;color:var(--muted);font-size:1.15rem}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;padding:13px 22px;border-radius:999px;font-weight:600;text-decoration:none;border:2px solid var(--accent)}
+.btn.primary{background:var(--accent);color:var(--accent-ink)}
+.btn:hover{filter:brightness(1.08)}
+h2{font-size:clamp(1.8rem,4vw,2.5rem);margin-bottom:10px}
+.lead{color:var(--muted);max-width:56ch;margin-bottom:34px}
+.grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:24px}
+.card h3{font-size:1.25rem;margin-bottom:6px}
+.card p{color:var(--muted)}
+.tag{display:inline-block;font-size:.85rem;font-weight:600;padding:3px 10px;border-radius:999px;background:var(--bg);border:1px solid var(--line);margin:12px 6px 0 0}
+/* projects */
+.project{padding:0;overflow:hidden;display:flex;flex-direction:column}
+.shot{height:170px;background:linear-gradient(135deg,var(--accent),var(--ink));position:relative;display:grid;place-items:center}
+.shot::before{content:"";position:absolute;inset:18px 18px 0;background:var(--surface);border-radius:10px 10px 0 0;opacity:.95}
+.shot b{position:relative;font:800 1.5rem "Bricolage Grotesque",sans-serif;color:var(--ink);text-align:center;padding:0 24px}
+.shot i{position:absolute;top:26px;left:30px;width:9px;height:9px;border-radius:50%;background:var(--mark);box-shadow:15px 0 var(--line),30px 0 var(--line)}
+.pbody{padding:22px;display:flex;flex-direction:column;gap:8px;flex:1}
+.live{align-self:flex-start;font-size:.85rem;font-weight:700;color:var(--accent)}
+.live::before{content:"";display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--accent);margin-right:7px}
+.pbody .btn{margin-top:auto;align-self:flex-start;padding:10px 18px}
+/* skills */
+.skill h3{display:flex;justify-content:space-between;align-items:baseline}
+.skill small{color:var(--muted);font:600 .85rem "Source Sans 3",sans-serif}
+/* contact */
+.contact{background:#14213d;color:#eaf0fb;border:1px solid #2c3d63;border-radius:var(--r);padding:40px}
+.contact h2{color:#fff}
+.contact .lead{color:#c3cde2}
+.clist{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));margin-top:10px}
+.clist a{display:block;padding:16px 18px;border:1px solid #3a4a6b;border-radius:12px;text-decoration:none;color:#fff}
+.clist a:hover{border-color:var(--mark)}
+.clist span{display:block;font-size:.85rem;color:#c3cde2}
+.clist strong{overflow-wrap:anywhere}
+footer{padding:30px 0 50px;color:var(--muted);text-align:center;font-size:.95rem}
+@media (max-width:560px){nav{gap:14px}.contact{padding:26px 20px}section{padding:52px 0}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><a class="brand" href="#top" id="brand"></a>
+<nav aria-label="Main"><a href="#work">Work</a><a href="#skills">Skills</a><a href="#contact">Contact</a></nav></div></header>
+
+<main id="top">
+<section class="hero"><div class="wrap">
+  <h1 id="heroTitle"></h1>
+  <p id="heroText"></p>
+  <div class="btns"><a class="btn primary" href="#work">See live projects</a><a class="btn" href="#contact">Get in touch</a></div>
+</div></section>
+
+<section id="services"><div class="wrap">
+  <h2>What we can build for you</h2>
+  <p class="lead">Tell us your idea in simple words. We turn it into something people can open and use.</p>
+  <div class="grid" id="services-grid"></div>
+</div></section>
+
+<section id="work"><div class="wrap">
+  <h2>Our work, live online</h2>
+  <p class="lead">These are real projects running on the internet right now. Tap “Open live site” to try them yourself.</p>
+  <div class="grid" id="projects-grid"></div>
+</div></section>
+
+<section id="skills"><div class="wrap">
+  <h2>Tools we use</h2>
+  <p class="lead">Each tool in plain language, so you know what it does for you.</p>
+  <div class="grid" id="skills-grid"></div>
+</div></section>
+
+<section id="contact"><div class="wrap"><div class="contact">
+  <h2>Let’s talk about your project</h2>
+  <p class="lead">Message us on WhatsApp or send an email. We usually reply the same day.</p>
+  <div class="clist" id="contact-list"></div>
+</div></div></section>
+</main>
+<footer><div class="wrap" id="footer"></div></footer>
+
+<script>
+/* ============================================================
+   EDIT HERE ONLY. Change the text below, save, and redeploy.
+   Lines marked TODO are placeholders to replace with real data.
+   ============================================================ */
+const CONFIG = {
+  name: "CodeNest Studio",                       // brand / team name
+  heroTitle: "We build websites that work for you",
+  heroText: "Simple websites, business software and data dashboards. Built with Django, Laravel, PHP and Python, and put online so you can use them from any phone or computer.",
+
+  services: [
+    { title: "Websites", text: "A clean, fast website for your school, shop or business that looks good on every phone." },
+    { title: "Business software", text: "Systems to manage inventory, sales, students or records, so you stop using paper and notebooks." },
+    { title: "Data analysis", text: "We turn your sheets and numbers into clear reports and charts that help you decide." }
+  ],
+
+  projects: [
+    {
+      title: "Jamia Rahmania Rizvia Website",
+      text: "Landing page and online bookshop for a madrasa in Sohawa, Jhelum. Visitors can read about the institute and browse books, and staff manage everything from an admin panel.",
+      tags: ["Django", "Supabase", "HTML/CSS"],
+      link: "https://bookshop-08f4.onrender.com",
+      live: true
+    },
+    {
+      title: "School Management System",
+      text: "An online system for schools to keep student and teacher records in one place, instead of registers and paper files.",  // TODO check this matches the real features
+      tags: ["Python", "Database", "Web app"],   // TODO confirm tools used
+      link: "https://schoolmanagementsystem-3wtx.onrender.com",
+      live: true
+    }
+  ],
+
+  skills: [
+    { name: "Django", level: "Web apps", text: "Python framework for secure websites with login, database and admin panel." },
+    { name: "Python", level: "Core language", text: "Used for backends, automation and desktop tools." },
+    { name: "HTML & CSS", level: "Design", text: "The look of the page: layout, colors and mobile-friendly screens." },
+    { name: "Data analysis", level: "Insights", text: "Cleaning data and making reports and charts from it." },
+    { name: "PHP", level: "Web backend", text: "A widely used language for dynamic websites and hosting-friendly apps." },
+    { name: "Laravel", level: "PHP framework", text: "Modern PHP framework for well-organized, secure web applications." }
+  ],
+
+  contact: [
+    { label: "Email",    value: "ms8381966@gmail.com",       href: "mailto:ms8381966@gmail.com" },
+    { label: "Email",    value: "shayzi672@gmail.com",       href: "mailto:shayzi672@gmail.com" },
+    { label: "Phone",    value: "0317 5975949",              href: "tel:+923175975949" },
+    { label: "Phone",    value: "0326 1602360",              href: "tel:+923261602360" },
+    { label: "WhatsApp", value: "Chat: 0317 5975949",        href: "https://wa.me/923175975949" },
+    { label: "WhatsApp", value: "Chat: 0326 1602360",        href: "https://wa.me/923261602360" },
+    { label: "GitHub",   value: "github.com/Shahzaib556",  href: "https://github.com/Shahzaib556" }   // TODO real username
+  ]
+};
+/* ============================================================ */
+
+const $ = id => document.getElementById(id);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+document.title = CONFIG.name + " | Websites & Software";
+$("brand").textContent = CONFIG.name;
+$("heroTitle").textContent = CONFIG.heroTitle;
+$("heroText").textContent = CONFIG.heroText;
+
+$("services-grid").innerHTML = CONFIG.services.map(s =>
+  `<div class="card"><h3>${esc(s.title)}</h3><p>${esc(s.text)}</p></div>`).join("");
+
+$("projects-grid").innerHTML = CONFIG.projects.map(p =>
+  `<article class="card project">
+    <div class="shot"><i></i><b>${esc(p.title)}</b></div>
+    <div class="pbody">
+      ${p.live ? '<span class="live">Live now</span>' : ''}
+      <h3>${esc(p.title)}</h3><p>${esc(p.text)}</p>
+      <div>${p.tags.map(t => `<span class="tag">${esc(t)}</span>`).join("")}</div>
+      <a class="btn primary" href="${esc(p.link)}" target="_blank" rel="noopener">Open live site</a>
+    </div></article>`).join("");
+
+$("skills-grid").innerHTML = CONFIG.skills.map(s =>
+  `<div class="card skill"><h3>${esc(s.name)} <small>${esc(s.level)}</small></h3><p>${esc(s.text)}</p></div>`).join("");
+
+$("contact-list").innerHTML = CONFIG.contact.map(c =>
+  `<a href="${esc(c.href)}" target="_blank" rel="noopener"><span>${esc(c.label)}</span><strong>${esc(c.value)}</strong></a>`).join("");
+
+$("footer").textContent = "© " + new Date().getFullYear() + " " + CONFIG.name + ". All rights reserved.";
+</script>
+</body>
+</html>
